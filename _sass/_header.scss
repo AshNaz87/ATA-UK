@@ -3,23 +3,32 @@
   color: $main-green;
   position: fixed;
   width: 100%;
+  z-index: 20;
   .header-nav {
     float: right;
     list-style-type: none;
     margin: 0;
-    padding: 0;
+    padding: 5.5vh 0 0;
     > li {
-      display: inline-block;
-      font-size: 1.5em;       
-      font-weight: bold;
-      margin-left: 1em;
-      padding-top: 5.5vh;
+      display: inline-block;      
+      margin-left: 1em;      
       text-align: center;
       width: 200px;
+      &:first-child {
+        margin-left: 1em;
+      }
+      &:last-child {
+        margin-right: 1em;
+      }
     }
     a {
       color: #0E7A36;   
+      font-size: 1.5em;       
+      font-weight: bold;
       text-decoration: none;
+      &:hover, &:active {
+        color: silver;
+      }
     }
     .get-involved-dropdown > *, .about-us-dropdown > * {
       list-style-type: none;
@@ -28,7 +37,14 @@
     }
   }
   .header-logo {
+    background-color: #fff;
+    display: block;
+    margin: 1vh 0 1vh 60px;
+    position: relative;
+    text-align: center;
     width: 10vw;
-    margin: 2vh 0 0 60px;
+    img {
+      width: 10vw;
+    }  
   }
 }

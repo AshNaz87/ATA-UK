@@ -18,15 +18,16 @@
       <li><a href="#">Blog</a></li>
     </ul>
   </nav>
-  <a href="#">
-    <img src="/assets/images/ata_logo.jpg" class="header-logo" alt="header logo">
+  <a href="#" class="header-logo">
+    <img src="/assets/images/ata_logo.jpg" alt="header logo">
   </a>
 </header>
 <script>
-  document.addEventListener('DOMContentLoaded', function(event) {
+  document.addEventListener('DOMContentLoaded', function(e) {
+    e.preventDefault();
+
     document.querySelector('.get-involved-navbar').style.display = 'none';
     document.querySelector('.about-us-navbar').style.display = 'none';
 
-    document.addEventListener()
   });
 </script>
