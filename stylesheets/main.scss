@@ -3,11 +3,11 @@
 
 @charset 'UTF-8';
 // Import partials from the `_sass` directory
-@import url('https://fonts.googleapis.com/css?family=Lato|Noto+Sans');
 @import "bootstrap/scss/functions";
 @import "bootstrap/scss/bootstrap";
 @import 'colors';
 @import 'header';
 @import 'layout';
+@import 'footer';
 @import 'typography';
 @import 'variables';
