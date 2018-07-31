@@ -1,0 +1,33 @@
+footer {
+  background-color: $gunmetal;
+  color: #ccc;
+  height: 50vh;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  .footer-details-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    flex-direction: column;
+    max-height: 100%;
+    width: 33.3%;
+    .footer-logo img {
+      width: 5vw;
+    }
+  }
+  .footer-nav {
+    list-style-type: none;      
+    width: 50%;
+    li {
+    display: block;
+    margin-top: 2em;
+    padding: 0;
+    text-align: left;
+      a {
+        color: #ccc;
+        text-decoration: none;
+      }
+    }
+  }
+}
