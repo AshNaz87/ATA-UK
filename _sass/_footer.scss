@@ -2,42 +2,67 @@ footer {
   background-color: $gunmetal;
   color: #ccc;
   height: 50vh;
+  overflow-y: hidden;
   position: absolute;
   bottom: 0;
   width: 100%;
-  .footer-details-wrapper {    
-    max-height: 100%;
-    width: 33.3%;
-    .social-links {
-      list-style-type: none;
-      li { 
-        display: inline-block;                
-        padding-left: 1em;
-        a {
-          text-decoration: none;        
-        }                
-      }
-    }
-    > * {
-      color: #ccc;
-      margin: 1em;
-    }
+  .address-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-direction: column;
+    height: 50vh;
     .footer-logo img {
       width: 5vw;
     }
-  }
-  .footer-nav {
-    list-style-type: none;      
-    width: 50%;
-    li {
-      display: block;
-      margin-top: 2em;
-      padding: 0;
-      text-align: left;
-      a {
-        color: #ccc;
+    address {
+      margin-bottom: 0;
+    }
+    a[href^="tel:"], a[href^="mailto:"] {
+      color: #ccc;
+      &:hover {
         text-decoration: none;
       }
     }
   }
-}
+  .footer-nav-wrapper {      
+    height: 50vh;                
+    .footer-list {      
+      list-style-type: none;          
+      li {
+        display: block;
+        margin-top: 2em;
+        padding: 0;
+        text-align: left;
+        a {
+          color: #ccc;
+          text-decoration: none;
+        }                                 
+      }
+      [class^="footer-social"] { 
+        display: inline-block;                
+        padding-left: 1em;
+        &:nth-child(2) {
+          padding-left: 0px;
+        }
+        a {
+          text-decoration: none;          
+          > * {            
+            color: #ccc;
+            &:hover {
+              color: darkgray;
+            }
+          }
+        }        
+      }
+    }    
+  }
+  .wrapper-col {
+    position: relative;
+    .nav-position {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }  
+}    

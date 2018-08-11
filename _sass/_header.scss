@@ -25,15 +25,35 @@
       color: #0E7A36;   
       font-size: 1.5em;       
       font-weight: bold;
+      position: relative;
       text-decoration: none;
-      &:hover, &:active {
-        color: silver;
+      &.underline {
+        transition: all 0.2s ease-in-out;             
+        &::before {
+          background-color: #000;
+          position: absolute;
+          left: 0;
+          bottom: -5px;
+          width: 100%;         
+          content: '';          
+          height: 2px;
+          transform: scaleX(0);
+          -webkit-transform: scaleX(0);        
+          transition: all 0.3s ease-in-out;          
+          -webkit-transition: all 0.3s ease-in-out;                            
+        }
+        &:hover::before {          
+          left: 0;
+          visibility: visible;
+          transform: scaleX(1);
+          -webkit-transform: scaleX(1);          
+        }          
       }
-    }
-    .get-involved-dropdown > *, .about-us-dropdown > * {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
+      [class$="dropdown"] > * {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
     }
   }
   .header-logo {
@@ -45,6 +65,6 @@
     width: 10vw;
     img {
       width: 10vw;
-    }  
+    }      
   }
 }
