@@ -1,10 +1,13 @@
-*, *::before, *::after {
+*, 
+*::before, 
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-html, body {
+html, 
+body {
   height: 100%;
   margin: 0;
   position: relative;
@@ -18,9 +21,11 @@ table {
 strong, b {
   font-weight: bold;
 }
+
 em, i {
   font-style: italic;
 }
+
 a img {
   border: none;
 }

@@ -1,15 +1,18 @@
 <header class="header">
-  <nav>
+  <nav>    
+    <a href="#" class="header-logo">
+      <img src="/assets/images/ata_logo.jpg" alt="ATA UK">
+    </a>
     <ul class="header-nav">
-      <li><a href="#" class="get-involved-dropdown">Get Involved</a>
-        <ul class="get-involved-navbar">
+      <li class="dropdown" aria-controls="submenuOne"><a href="#">Get Involved</a>
+        <ul class="submenu">
           <li><a href="#">Donate</a></li>
           <li><a href="#">Projects</a></li>
-          <li><a href="#">Policy &amp; Practice</a></li>
+          <li><a href="#">Policy</a></li>
         </ul>
       </li>
-      <li><a href="#" class="about-us-dropdown">About us</a>
-        <ul class="about-us-navbar">
+      <li class="dropdown" aria-controls="submenuTwo"><a href="#">About us</a>
+        <ul class="submenu">
           <li><a href="#">History</a></li>
           <li><a href="#">Team</a></li>
         </ul>
@@ -18,16 +21,23 @@
       <li><a href="#" class="underline">Blog</a></li>
     </ul>
   </nav>
-  <a href="#" class="header-logo">
-    <img src="/assets/images/ata_logo.jpg" alt="ATA UK">
-  </a>
 </header>
-<script>
-  document.addEventListener('DOMContentLoaded', function(e) {
-    e.preventDefault();
+<script>  
+  var dropdown = document.getElementsByClassName('dropdown');    
+  
+  document.addEventListener('DOMContentLoaded', function(event) {
 
-    document.querySelector('.get-involved-navbar').style.display = 'none';
-    document.querySelector('.about-us-navbar').style.display = 'none';
+    event.preventDefault();
 
-  });
-</script>
+    // for (let node of dropdown) {
+      Array.from(dropdown).forEach(function(node) {
+        node.addEventListener('mouseenter', function(event) {        
+          event.target.querySelector(':scope > ul.submenu').style.display = 'block';          
+        });
+
+        node.addEventListener('mouseleave', function(event) {        
+          event.target.querySelector(':scope > ul.submenu').style.display = 'none';
+        });
+      });
+    });
+  </script>

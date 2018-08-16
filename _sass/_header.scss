@@ -1,70 +1,103 @@
 .header {
-  background-color: #fff;
+  background-color: #000;
   color: $main-green;
   position: fixed;
-  width: 100%;
-  z-index: 20;
-  .header-nav {
-    float: right;
-    list-style-type: none;
-    margin: 0;
-    padding: 5.5vh 0 0;
-    > li {
-      display: inline-block;      
-      margin-left: 1em;      
-      text-align: center;
-      width: 200px;
-      &:first-child {
-        margin-left: 1em;
-      }
-      &:last-child {
-        margin-right: 1em;
-      }
+  height: 20vh;
+  width: 100vw;  
+  nav {
+    padding: 0 5em;
+    height: inherit;
+    width: inherit;      
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;    
+    a.header-logo {      
+      background-color: transparent;      
+      width: 12vw;
+      img {
+        width: 10vw;
+      }      
     }
-    a {
-      color: #0E7A36;   
-      font-size: 1.5em;       
-      font-weight: bold;
-      position: relative;
-      text-decoration: none;
-      &.underline {
-        transition: all 0.2s ease-in-out;             
-        &::before {
-          background-color: #000;
-          position: absolute;
-          left: 0;
-          bottom: -5px;
-          width: 100%;         
-          content: '';          
-          height: 2px;
-          transform: scaleX(0);
-          -webkit-transform: scaleX(0);        
-          transition: all 0.3s ease-in-out;          
-          -webkit-transition: all 0.3s ease-in-out;                            
+    .header-nav {        
+      margin-left: 10em;
+      padding: 0;
+      width: 100%;
+      li {
+        padding: 0 1.5em;
+        display: inline-block;
+        list-style-type: none;            
+        a {
+          color: #0E7A36;        
+          font-size: 1.5em;       
+          font-weight: 500;
+          position: relative;
+          text-decoration: none;        
+          &.underline {
+            transition: all 0.2s ease-in-out;             
+            &::before {
+              background-color: $cosmic-cobalt;
+              position: absolute;
+              left: 0;
+              bottom: -5px;
+              width: 100%;         
+              content: '';          
+              height: 2px;
+              transform: scaleX(0);
+              -webkit-transform: scaleX(0);        
+              transition: all 0.3s ease-in-out;          
+              -webkit-transition: all 0.3s ease-in-out;                            
+            }
+            &:hover::before {          
+              left: 0;
+              visibility: visible;
+              transform: scaleX(1);
+              -webkit-transform: scaleX(1);          
+            }          
+          }      
         }
-        &:hover::before {          
-          left: 0;
-          visibility: visible;
-          transform: scaleX(1);
-          -webkit-transform: scaleX(1);          
-        }          
       }
-      [class$="dropdown"] > * {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
+      li.dropdown {
+        position: relative;      
+        > a {
+          position: relative;
+          &::after {
+            content: '';
+            position: absolute;
+            right: -1.2em;
+            bottom: 0;
+            height: 0;
+            width: 0;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            border-top: 8px solid $cosmic-cobalt;
+          }
+        }
+        > ul.submenu {
+          box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+          background-color: #ccc;
+          display: none;        
+          list-style: none;
+          margin: 0;        
+          padding: 0;
+          position: absolute;          
+          right: 0;
+          width: 80%;          
+          li {
+            padding: 1em;
+            display: block;
+            font-size: 0.75em;
+            list-style-type: none;                    
+            ~ li {
+              border-top: 1px dotted rgba(0, 0, 0, 0.1);
+            }        
+            a {                          
+              text-align: left;
+              white-space: nowrap;
+            }
+          }
+        }
       }
-    }
-  }
-  .header-logo {
-    background-color: #fff;
-    display: block;
-    margin: 1vh 0 1vh 60px;
-    position: relative;
-    text-align: center;
-    width: 10vw;
-    img {
-      width: 10vw;
-    }      
+    }    
   }
 }
