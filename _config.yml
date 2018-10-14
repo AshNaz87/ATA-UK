@@ -41,9 +41,11 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
-sass: 
+sass:
   style: compressed
-  load_paths: 
+  load_paths:
     - _sass
     - node_modules
 exclude: []
+gems:
+  - octopress-autoprefixer
