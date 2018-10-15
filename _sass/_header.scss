@@ -6,8 +6,6 @@
   width: 100vw;
   nav {
     padding: 0 5em;
-    height: inherit;
-    width: inherit;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -95,6 +93,29 @@
           }
         }
       }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  html {
+    box-shadow: none;
+    padding: 0;
+  }
+
+  .header-nav {
+    padding: 2vh 1em 0 0;
+    > li {
+      margin-left: 0.25em;
+    }
+    ~ li {
+      padding-left: 0.25em;
+    }
+    .nav-links a {
+      font-size: 3.25vw;
+    }
+    .header-logo {
+      left: auto;
     }
   }
 }
