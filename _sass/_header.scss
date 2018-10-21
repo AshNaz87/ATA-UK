@@ -4,17 +4,26 @@
   position: fixed;
   height: 20vh;
   width: 100vw;
+  z-index: 20;
   nav {
     padding: 0 5em;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: nowrap;
-    a.header-logo {
-      background-color: transparent;
-      width: 12vw;
-      img {
-        width: 10vw;
+    .logo-wrapper {
+      position: relative;
+      height: 20vh;
+      width: 10vw;
+      .header-logo {
+        box-sizing: border-box;
+        display: block;
+        img {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 100%;
+        }
       }
     }
     .header-nav {
@@ -97,25 +106,37 @@
   }
 }
 
-@media screen and (max-width: 800px) {
+@media (max-width: 420px) {
   html {
     box-shadow: none;
     padding: 0;
   }
-
-  .header-nav {
-    padding: 2vh 1em 0 0;
-    > li {
-      margin-left: 0.25em;
+  .header {
+    nav .header-nav {
+      margin: 0;
+      li a {
+        font-size: 3.25vh;
+        &.underline {
+          &::before {
+            visibility: hidden;
+          }
+          &:hover::before {
+            visibility: hidden;
+          }
+        }
+      }
+      > li {
+        margin-left: 0.25em;
+      }
+      ~ li {
+        padding-left: 0.25em;
+      }
+      .header-logo {
+        left: auto;
+      }
     }
-    ~ li {
-      padding-left: 0.25em;
-    }
-    .nav-links a {
-      font-size: 3.25vw;
-    }
-    .header-logo {
-      left: auto;
+    li.dropdown > a::after {
+      visibility: hidden;
     }
   }
 }

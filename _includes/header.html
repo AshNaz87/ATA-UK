@@ -1,13 +1,15 @@
 <header class="header">
-  <nav>    
-    <a href="#" class="header-logo">
-      <img src="/assets/images/ata_logo.jpg" alt="ATA UK">
-    </a>
+  <nav>
+    <div class="logo-wrapper">
+      <a href="#" class="header-logo">
+        <img src="/assets/images/ata_logo.jpg" alt="ATA UK">
+      </a>
+    </div>
     <ul class="header-nav">
       <li class="dropdown" aria-controls="submenuOne"><a href="#">Get Involved</a>
         <ul class="submenu">
           <li><a href="#">Donate</a></li>
-          <li><a href="#">Projects</a></li>          
+          <li><a href="#">Projects</a></li>
         </ul>
       </li>
       <li class="dropdown" aria-controls="submenuTwo"><a href="#">About us</a>
@@ -21,22 +23,21 @@
     </ul>
   </nav>
 </header>
-<script>  
-  var dropdown = document.getElementsByClassName('dropdown');    
-  
+<script>
+  var dropdown = document.getElementsByClassName('dropdown');
+
   document.addEventListener('DOMContentLoaded', function(event) {
 
     event.preventDefault();
 
-    // for (let node of dropdown) {
-      Array.from(dropdown).forEach(function(node) {
-        node.addEventListener('mouseenter', function(event) {        
-          event.target.querySelector(':scope > ul.submenu').style.display = 'block';          
-        });
+    Array.from(dropdown).forEach(function(node) {
+      node.addEventListener('mouseenter', function(event) {
+        event.target.querySelector(':scope > ul.submenu').style.display = 'block';
+      });
 
-        node.addEventListener('mouseleave', function(event) {        
-          event.target.querySelector(':scope > ul.submenu').style.display = 'none';
-        });
+      node.addEventListener('mouseleave', function(event) {
+        event.target.querySelector(':scope > ul.submenu').style.display = 'none';
       });
     });
-  </script>
+  });
+</script>
