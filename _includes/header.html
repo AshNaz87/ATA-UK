@@ -1,43 +1,42 @@
-<header class="header">
-  <nav>
-    <div class="logo-wrapper">
-      <a href="#" class="header-logo">
-        <img src="/assets/images/ata_logo.jpg" alt="ATA UK">
-      </a>
-    </div>
-    <ul class="header-nav">
-      <li class="dropdown" aria-controls="submenuOne"><a href="#">Get Involved</a>
-        <ul class="submenu">
-          <li><a href="#">Donate</a></li>
-          <li><a href="#">Projects</a></li>
-        </ul>
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color:whitesmoke;">
+  <a class="navbar-brand" href="#">
+    <img src="/assets/images/ata_logo.jpg" class="navbar-logo" alt="ATA UK">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Get Involved<span class="sr-only">(current)</span></a>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Donate</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Projects</a>
+        </div>
       </li>
-      <li class="dropdown" aria-controls="submenuTwo"><a href="#">About us</a>
-        <ul class="submenu">
-          <li><a href="#">History</a></li>
-          <li><a href="#">Team</a></li>
-        </ul>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          About us</a>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">History</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Team</a>
+        </div>
       </li>
-      <li><a href="#" class="underline">Contact us</a></li>
-      <li><a href="#" class="underline">Blog</a></li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Contact us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Blog</a>
+      </li>
     </ul>
-  </nav>
-</header>
-<script>
-  var dropdown = document.getElementsByClassName('dropdown');
-
-  document.addEventListener('DOMContentLoaded', function(event) {
-
-    event.preventDefault();
-
-    Array.from(dropdown).forEach(function(node) {
-      node.addEventListener('mouseenter', function(event) {
-        event.target.querySelector(':scope > ul.submenu').style.display = 'block';
-      });
-
-      node.addEventListener('mouseleave', function(event) {
-        event.target.querySelector(':scope > ul.submenu').style.display = 'none';
-      });
-    });
-  });
-</script>
+  </div>
+</nav>
