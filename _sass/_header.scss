@@ -142,14 +142,17 @@
 // }
 
 nav {
+  margin: 0 auto;
   .navbar-logo {
     width: 10vw;
   }
   .navbar-nav {
-    .nav-link,
-    .nav-link:visited,
-    .nav-link:hover {
-      color: $main-green;
+    margin: 0 auto;
+    .nav-link {
+      color: $main-green !important;
+    }
+    .dropdown-menu .dropdown-item {
+      color: $main-green !important;
     }
   }
 }
