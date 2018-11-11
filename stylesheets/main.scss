@@ -1,6 +1,10 @@
 ---
 ---
 
+body {
+  text-rendering: optimizeLegibility;
+}
+
 @charset 'UTF-8';
 // Import partials from the `_sass` directory
 @import "bootstrap/scss/functions";

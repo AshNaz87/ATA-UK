@@ -4,6 +4,9 @@ nav {
     width: 10vw;
     border-radius: 3px;
   }
+  button.navbar-toggler {
+    background-color: #fff !important;
+  }
   .navbar-nav {
     margin: 0 auto;
     a.nav-link {
@@ -12,6 +15,9 @@ nav {
     }
     .dropdown-menu .dropdown-item {
       color: $main-green !important;
+    }
+    .list-margin {
+      margin: 0 15px;
     }
   }
 }
