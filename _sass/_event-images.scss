@@ -1,0 +1,17 @@
+.card {
+  text-align: center;
+  .event-image {
+    max-width: 18rem;
+    background-size: contain;
+  }
+}
+
+.card-columns {
+  @include media-breakpoint-only(md) {
+    column-count: 2;
+  }
+
+  @include media-breakpoint-only(lg) {
+    column-count: 3;
+  }
+}

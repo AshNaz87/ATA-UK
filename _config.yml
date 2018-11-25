@@ -17,7 +17,7 @@ title: ATA UK
 email: ashraf.caspian@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Helping bring together, engage with and support the Afghan Turkic
-  diaspora in the UK and worldwide.
+  diaspora in the UK and worldwide
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "ata-uk.com" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
@@ -55,3 +55,8 @@ kramdown:
   input: GFM
 permalink: pretty
 exclude: []
+defaults:
+  - scope:
+    path: 'assets/img'
+    values:
+      image: true

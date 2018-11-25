@@ -8,9 +8,23 @@ title: Home
 </main>
 
 <article>
-  <div class="container-fluid">
+  <h2 class="section-title">Past events</h2>
+  <div class="container">
     <div class="row">
-      <div class="col-xs-12 col-md-4"></div>
+      <div class="col-xs-12">
+        <div class="card-columns">
+          {% for image in site.static_files %}
+            {% if image.path contains 'images/events' %}
+              <div class="card border-secondary mb-4">
+                <div class="card-header">Header</div>
+                  <div class="card-body text-secondary">
+                    <img src="{{ site.baseurl }}{{ image.path }}" alt="image" class="event-image" />
+                  </div>
+                </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
     </div>
   </div>
 </article>
