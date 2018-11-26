@@ -55,8 +55,3 @@ kramdown:
   input: GFM
 permalink: pretty
 exclude: []
-defaults:
-  - scope:
-    path: 'assets/img'
-    values:
-      image: true

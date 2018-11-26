@@ -13,15 +13,13 @@ title: Home
     <div class="row">
       <div class="col-xs-12">
         <div class="card-columns">
-          {% for image in site.static_files %}
-            {% if image.path contains 'images/events' %}
-              <div class="card border-secondary mb-4">
-                <div class="card-header">Header</div>
-                  <div class="card-body text-secondary">
-                    <img src="{{ site.baseurl }}{{ image.path }}" alt="image" class="event-image" />
-                  </div>
+          {% for event in site.events %}
+            <div class="card border-secondary mb-4">
+              <div class="card-header">{{ event.title }}</div>
+                <div class="card-body text-secondary">
+                  <img src="{{ site.baseurl }}/assets/images/events{{ event.image }}" alt="Previous Event" class="event-image" />
                 </div>
-            {% endif %}
+              </div>
           {% endfor %}
         </div>
       </div>
