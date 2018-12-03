@@ -1,12 +1,12 @@
-*, 
-*::before, 
+*,
+*::before,
 *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-html, 
+html,
 body {
   height: 100%;
   margin: 0;
@@ -28,4 +28,8 @@ em, i {
 
 a img {
   border: none;
+}
+
+.section-title {
+  margin: 1em 0;
 }
