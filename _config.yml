@@ -19,7 +19,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   Helping bring together, engage with and support the Afghan Turkic
   diaspora in the UK and worldwide
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://www.ata-uk.com" # the base hostname & protocol for your site, e.g. http://example.com
+url: "ata-uk.com" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
 github_username: AshNaz87
 
@@ -47,11 +47,17 @@ sass:
   load_paths:
     - _sass
     - node_modules
+
 collections:
   authors:
     output: true
-include: [_pages]
+  previous_events:
+    output: true
+  upcoming_events:
+    output: true
+collections_dir: my_collections
+
 kramdown:
   input: GFM
-permalink: pretty
+
 exclude: []
