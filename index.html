@@ -28,4 +28,29 @@ title: Home
       </div>
     </div>
   </div>
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h2 class="section-title">Upcoming Events</h2>
+      {% assign size_of_array = site.upcoming_events | size %}
+      {% if size_of_array == 0 %}
+        <h3>Stay tuned for our upcoming events...</h3>
+      {% else %}
+        <div class="card-columns">
+          {% assign upcoming_events = site.upcoming_events | sort: 'date' %}
+          {% for event in upcoming_events %}
+            <div class="card border-secondary mb-4">
+              <div class="card-header">{{ event.title }}</div>
+              <div class="card-body text-secondary">
+                <a href="{{ event.image_path }}" download>
+                  <img src="{{ event.image_path }}" alt="Previous Event" class="event-image">
+                </a>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
 </article>
