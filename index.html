@@ -8,7 +8,7 @@ title: Home
 </main>
 
 <article>
-  <div class="container-fluid">
+  <div class="container">
     <div class="row">
       <div class="col-12">
         <h2 class="section-title">Previous Events</h2>
@@ -18,7 +18,9 @@ title: Home
               <div class="card border-secondary mb-4">
                 <div class="card-header">{{ event.title }}</div>
                 <div class="card-body text-secondary">
-                  <img src="{{ event.image_path }}" alt="Previous Event" class="event-image">
+                  <a href="{{ event.image_path }}" download>
+                    <img src="{{ event.image_path }}" alt="Previous Event" class="event-image">
+                  </a>
                 </div>
               </div>
             {% endfor %}
