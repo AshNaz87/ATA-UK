@@ -18,6 +18,16 @@
   }
 }
 
+.statement-wrapper {
+  margin: 2em 0;
+  height: 30vh;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
 @media (max-width: 540px) {
   .hero-home {
     .tagline {
