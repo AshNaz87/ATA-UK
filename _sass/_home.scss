@@ -2,8 +2,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 85%;
+  height: 100%;
   width: auto;
+  overflow-y: hidden;
 }
 
 .hero-home {
@@ -20,7 +21,7 @@
 
 .statement-wrapper {
   margin: 2em 0;
-  height: 60vh;
+  min-height: 500px;
   width: 100%;
   text-align: center;
   display: flex;
@@ -28,7 +29,7 @@
   justify-content: space-around;
   align-items: center;
   .inspiration {
-    width: 500px;
+    width: 350px;
   }
 }
 
