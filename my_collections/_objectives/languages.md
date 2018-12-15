@@ -1,5 +1,5 @@
 ---
 image_path: /assets/images/objectives/languages.svg
-heading: Recognise the Importance of Heritage and Languages
+heading: Recognising the Importance of Heritage & Languages
 description: We are spearheading a campaign to help the future generations to learn our languages and customs
 ---
