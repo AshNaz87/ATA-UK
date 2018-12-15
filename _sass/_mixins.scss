@@ -1,0 +1,30 @@
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-column($justify-content, $align-items) {
+  display: flex;
+  flex-direction: column;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  align-content: center;
+}
+
+@mixin margin-bottom {
+  margin-bottom: 3em;
+}
+
+@mixin diagonal($transform-origin, $transform) {
+  background: inherit;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transform-origin: $transform-origin;
+  transform: skewY($transform);
+  z-index: -10;
+}

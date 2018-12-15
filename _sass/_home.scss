@@ -1,8 +1,6 @@
 .full-hero {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
+  @include flex-center;
+  height: 100vh;
   width: auto;
   overflow-y: hidden;
 }
@@ -15,7 +13,6 @@
   .tagline {
     text-align: center;
     color: whitesmoke;
-    font-family: 'Helvetica Neue', Helvetica, Open-Sans, sans-serif;
   }
 }
 
@@ -24,12 +21,32 @@
   min-height: 500px;
   width: 100%;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+  @include flex-column(space-around, center);
   .inspiration {
     width: 350px;
+    @include margin-bottom;
+  }
+}
+
+
+.objectives {
+  background-image: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);
+  position: relative;
+  &::before {
+    @include diagonal(top left, -3deg);
+  }
+  &::after {
+    @include diagonal(bottom left, 3deg);
+  }
+  .objective-wrapper {
+    min-height: 30vh;
+    width: 100%;
+    @include flex-column(space-between, center);
+    text-align: center;
+    margin: 2em 0;
+    .objective {
+      max-height: 100px;
+    }
   }
 }
 

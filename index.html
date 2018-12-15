@@ -15,7 +15,11 @@ title: Home
           <div class="statement-wrapper">
             <h2>HELP US IN BUILDING A LEGACY</h2>
             <h4>Our mission is to serve our communities where support is needed</h4>
-            <img src="{{ site.baseurl }}/assets/images/inspiration.jpg" alt="Join Us" class="inspiration">
+            <picture>
+              <source srcset="{{ site.baseurl }}/assets/images/inspiration.webp" type="image/webp">
+              <source srcset="{{ site.baseurl }}/assets/images/inspiration.jpg" type="image/jpg">
+              <img src="{{ site.baseurl }}/assets/images/inspiration.jpg" alt="Join Us" class="inspiration">
+            </picture>
           </div>
         </div>
       </div>
@@ -23,20 +27,17 @@ title: Home
   </section>
 
   <section class="objectives">
-    <div class="container-fluid">
+    <div class="container">
       <div class="row">
-        <div class="col-12 col-md-2 col-lg-4">
-
-        </div>
-        <div class="col-12 col-md-2 col-lg-4">
-
-        </div>
-        <div class="col-12 col-md-2 col-lg-4">
-
-        </div>
-        <div class="col-12 col-md-2 col-lg-4">
-
-        </div>
+        {% for objective in site.objectives %}
+          <div class="col-12 col-md-6">
+            <div class="objective-wrapper">
+              <img src="{{ objective.image_path }}" alt="Objective" class="objective">
+              <h3>{{ objective.heading }}</h3>
+              <p>{{ objective.description }}</p>
+            </div>
+          </div>
+        {% endfor %}
       </div>
     </div>
   </section>
@@ -87,5 +88,6 @@ title: Home
       </div>
     </div>
   </section>
-  <hr>
 </article>
+
+<hr>

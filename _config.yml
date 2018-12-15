@@ -51,6 +51,8 @@ sass:
 collections:
   authors:
     output: true
+  objectives:
+    output: true
   previous_events:
     output: true
   upcoming_events:
