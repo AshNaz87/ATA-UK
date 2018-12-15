@@ -1,15 +1,17 @@
-.card {
-  text-align: center;
-  .event-image {
-    background-size: contain;
-    cursor: pointer;
-    height: 18rem;
-    width: 14rem;
+.events {
+  @include margin-bottom;
+  .card {
+    text-align: center;
+    .event-image {
+      background-size: contain;
+      cursor: pointer;
+      height: 18rem;
+      width: 14rem;
+    }
   }
 }
 
 .card-columns {
-
   @include media-breakpoint-only(sm) {
     column-count: 1;
   }

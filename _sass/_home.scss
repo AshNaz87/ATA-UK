@@ -30,8 +30,10 @@
 
 
 .objectives {
-  background-image: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);
+  background-color: $cosmic-cobalt;
+  color: #fff;
   position: relative;
+  @include margin-bottom;
   &::before {
     @include diagonal(top left, -3deg);
   }

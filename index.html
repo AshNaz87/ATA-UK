@@ -46,7 +46,7 @@ title: Home
     <div class="container-fluid">
       <div class="row">
         <div class="col-12">
-          <h2 class="section-title">Previous Events</h2>
+          <h2 class="section-title text-center">PREVIOUS EVENTS</h2>
           <div class="card-columns">
             {% assign previous_events = site.previous_events | sort: 'date' %}
             {% for event in previous_events %}
@@ -65,7 +65,7 @@ title: Home
 
       <div class="row">
         <div class="col-12">
-          <h2 class="section-title">Upcoming Events</h2>
+          <h2 class="section-title text-center">UPCOMING EVENTS</h2>
           {% assign size_of_array = site.upcoming_events | size %}
           {% if size_of_array == 0 %}
           <h3>Stay tuned for our upcoming events...</h3>
@@ -89,5 +89,3 @@ title: Home
     </div>
   </section>
 </article>
-
-<hr>
