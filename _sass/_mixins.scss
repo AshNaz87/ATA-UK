@@ -12,10 +12,6 @@
   align-content: center;
 }
 
-@mixin margin-bottom {
-  margin-bottom: 3em;
-}
-
 @mixin diagonal($transform-origin, $transform) {
   background: inherit;
   content: '';
@@ -27,4 +23,13 @@
   transform-origin: $transform-origin;
   transform: skewY($transform);
   z-index: -10;
+}
+
+@mixin wrapper($min-height) {
+  min-height: $min-height;
+  width: 100%;
+}
+
+@mixin margin-bottom {
+  margin-bottom: 3em;
 }
