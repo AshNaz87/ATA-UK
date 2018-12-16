@@ -64,4 +64,6 @@ collections_dir: my_collections
 kramdown:
   input: GFM
 
-exclude: []
+exclude:
+- Gemfile
+- Gemfile.lock
