@@ -1,6 +1,6 @@
 .full-hero {
   @include flex-center;
-  height: 85vh;
+  height: 100vh;
   width: auto;
   overflow-y: hidden;
 }
@@ -16,18 +16,20 @@
   }
 }
 
-.statement-wrapper {
-  margin: 2em 0;
-  min-height: 500px;
-  width: 100%;
-  text-align: center;
-  @include flex-column(space-around, center);
-  .inspiration {
-    width: 350px;
-    @include margin-bottom;
+
+.mission {
+  .mission-wrapper {
+    margin: 2em 0;
+    min-height: 500px;
+    width: 100%;
+    text-align: center;
+    @include flex-column(space-around, center);
+    .inspiration {
+      width: 350px;
+      @include margin-bottom;
+    }
   }
 }
-
 
 .objectives {
   background-color: $cosmic-cobalt;
@@ -48,6 +50,24 @@
     margin: 2em 0;
     .objective {
       max-height: 100px;
+    }
+  }
+}
+
+.statements {
+  background-color: $persian-green;
+  color: #fff;
+  position: relative;
+  padding-bottom: 3em;
+  &::before {
+    @include diagonal(top left, -3deg);
+  }
+  .statements-wrapper {
+    min-height: 32vh;
+    width: 100%;
+    .pdf {
+      height: 600px;
+      width: 100%;
     }
   }
 }
