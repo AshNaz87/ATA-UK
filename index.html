@@ -100,7 +100,11 @@ title: Home
             <div class="statements-wrapper">
               <h3 class="text-center">{{ statement.heading }}</h3>
               <p class="text-center">{{ statement.description }}</p>
-              <embed src="{{ statement.document_path }}" alt="pdf" pluginspage="http://www.adobe.com/products/acrobat/readstep2.html" type="application/pdf" class="pdf">
+                <iframe
+                  class="pdf"
+                  src="{{ statement.pdf_js_url }}"
+                  style="border: none;">
+                </iframe>
             </div>
           </div>
         {% endfor %}
@@ -108,3 +112,6 @@ title: Home
     </div>
   </section>
 </article>
+
+<script src="assets/javascripts/pdf_js/build/pdf.js"></script>
+<script src="assets/javascripts/pdf_js/build/pdf.worker.js"></script>
