@@ -1,17 +1,15 @@
 footer {
   background-color: $gunmetal;
   color: #ccc;
-  height: 50vh;
-  overflow-y: hidden;
-  width: 100vw;
+  min-height: 50vh;
+  width: 100%;
   .address-wrapper {
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
-    height: 50vh;
-    width: 100%;
+    @include wrapper(50vh);
     .footer-logo img {
-      width: 5vw;
+      width: 100px;
       border-radius: 3px;
     }
     address {
@@ -25,7 +23,7 @@ footer {
     }
   }
   .footer-nav-wrapper {
-    height: 50vh;
+    min-height: 50vh;
     text-align: center;
     .footer-list {
       list-style-type: none;
@@ -64,6 +62,16 @@ footer {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
+    }
+  }
+}
+
+@media screen and (max-width: 540px) {
+  footer {
+    .address-wrapper {
+      .footer-logo img {
+        width: 75px;
+      }
     }
   }
 }

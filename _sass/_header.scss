@@ -1,7 +1,7 @@
 nav {
   margin: 0 auto;
   .navbar-logo {
-    width: 7vw;
+    width: 150px;
     border-radius: 3px;
   }
   button.navbar-toggler {
@@ -22,8 +22,13 @@ nav {
   }
 }
 
-@media (max-width: 420px) {
-  a.nav-link {
-    text-align: center;
+@media (max-width: 540px) {
+  nav {
+    .navbar-logo {
+      width: 100px;
+    }
+    a.nav-link {
+      text-align: center;
+    }
   }
 }
