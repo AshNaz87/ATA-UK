@@ -2,7 +2,6 @@
   @include flex-center;
   height: 100vh;
   width: auto;
-  overflow: hidden;
 }
 
 .hero-home {
@@ -61,21 +60,11 @@
     @include diagonal(top left, -3deg);
   }
   .statements-wrapper {
-    @include wrapper(32vh);
+    text-align: center;
+    @include wrapper(50vh);
     .pdf {
-      height: 500px;
+      height: 600px;
       width: 100%;
-    }
-  }
-}
-
-@media (max-width: 540px) {
-  .full-hero {
-    height: 100vh;
-  }
-  .hero-home {
-    .tagline {
-      font-size: 20px;
     }
   }
 }

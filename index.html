@@ -14,7 +14,7 @@ title: Home
         <div class="col-12">
           <div class="mission-wrapper">
             <h2>HELP US BUILD A LEGACY</h2>
-            <h4>Our mission is to serve our communities</h4>
+            <h4>Serving our communities</h4>
             <picture>
               <source srcset="{{ site.baseurl }}/assets/images/inspiration.webp" type="image/webp">
               <source srcset="{{ site.baseurl }}/assets/images/inspiration.jpg" type="image/jpg">
@@ -30,13 +30,13 @@ title: Home
     <div class="container">
       <div class="row">
         {% for objective in site.objectives %}
-        <div class="col-12 col-md-6">
-          <div class="objective-wrapper">
-            <img src="{{ objective.image_path }}" alt="Objective" class="objective">
-            <h3>{{ objective.heading }}</h3>
-            <p>{{ objective.description }}</p>
+          <div class="col-12 col-md-6">
+            <div class="objective-wrapper">
+              <img src="{{ objective.image_path }}" alt="Objective" class="objective">
+              <h3>{{ objective.heading }}</h3>
+              <p>{{ objective.description }}</p>
+            </div>
           </div>
-        </div>
         {% endfor %}
       </div>
     </div>
@@ -50,14 +50,14 @@ title: Home
           <div class="card-columns">
             {% assign previous_events = site.previous_events | sort: 'date' %}
             {% for event in previous_events %}
-            <div class="card border-secondary mb-4">
-              <div class="card-header">{{ event.title }}</div>
-              <div class="card-body text-secondary">
-                <a href="{{ event.image_path }}" download>
-                  <img src="{{ event.image_path }}" alt="Previous Event" class="event-image">
-                </a>
+              <div class="card border-secondary mb-4">
+                <div class="card-header">{{ event.title }}</div>
+                <div class="card-body text-secondary">
+                  <a href="{{ event.image_path }}" download>
+                    <img src="{{ event.image_path }}" alt="Previous Event" class="event-image">
+                  </a>
+                </div>
               </div>
-            </div>
             {% endfor %}
           </div>
         </div>
@@ -68,21 +68,21 @@ title: Home
           <h2 class="section-title">UPCOMING EVENTS</h2>
           {% assign size_of_array = site.upcoming_events | size %}
           {% if size_of_array == 0 %}
-          <h3>Stay tuned for our upcoming events...</h3>
+            <h3>Stay tuned for our upcoming events...</h3>
           {% else %}
-          <div class="card-columns">
-            {% assign upcoming_events = site.upcoming_events | sort: 'date' %}
-            {% for event in upcoming_events %}
-            <div class="card border-secondary mb-4">
-              <div class="card-header">{{ event.title }}</div>
-              <div class="card-body text-secondary">
-                <a href="{{ event.image_path }}" download>
-                  <img src="{{ event.image_path }}" alt="Upcoming Event" class="event-image">
-                </a>
-              </div>
+            <div class="card-columns">
+              {% assign upcoming_events = site.upcoming_events | sort: 'date' %}
+              {% for event in upcoming_events %}
+                <div class="card border-secondary mb-4">
+                  <div class="card-header">{{ event.title }}</div>
+                  <div class="card-body text-secondary">
+                    <a href="{{ event.image_path }}" download>
+                      <img src="{{ event.image_path }}" alt="Upcoming Event" class="event-image">
+                    </a>
+                  </div>
+                </div>
+              {% endfor %}
             </div>
-            {% endfor %}
-          </div>
           {% endif %}
         </div>
       </div>
@@ -98,9 +98,11 @@ title: Home
         {% for statement in site.statements %}
           <div class="col-12 col-md-6">
             <div class="statements-wrapper">
-              <h3 class="text-center">{{ statement.heading }}</h3>
-              <p class="text-center">{{ statement.description }}</p>
-              <embed src="{{ statement.document_path }}" alt="pdf" pluginspage="http://www.adobe.com/products/acrobat/readstep2.html" type="application/pdf" class="pdf">
+              <h3>{{ statement.heading }}</h3>
+              <p>{{ statement.description }}</p>
+              <object data="{{ statement.pdf_path }}" type="application/pdf" class="pdf">
+                <embed src="{{ statement.pdf_path }}" type="application/pdf" class="pdf">
+              </object>
             </div>
           </div>
         {% endfor %}
