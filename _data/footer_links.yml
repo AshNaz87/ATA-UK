@@ -1,0 +1,8 @@
+footer_nav_social:
+  Blog: "/blog"
+  Donate: "/get-involved/donate"
+footer_nav_general:
+  Projects: "get-involved/projects"
+  History: "/about-us/history"
+  Team: "/about-us/team"
+  Contact: "/contact-us"
