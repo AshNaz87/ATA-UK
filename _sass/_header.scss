@@ -7,6 +7,9 @@ nav {
   button.navbar-toggler {
     background-color: #fff !important;
   }
+  .dropdown-toggle {
+    cursor: pointer;
+  }
   .navbar-nav {
     margin: 0 auto;
     a.nav-link {

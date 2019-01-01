@@ -13,8 +13,8 @@
             Kent<br>
             DA7 5NJ
           </address>
-          <a href="tel:+441322404806">01322404806</a>
-          <a href="mailto:info@ata-uk.com">info@ata-uk.com</a>
+          <a href="tel:+441322404806">{{ site.tel_no }}</a>
+          <a href="mailto:info@ata-uk.com">{{ site.generic_email_address }}</a>
         </div>
       </div>
       <div class="col-md-4 d-none d-sm-block">
@@ -23,7 +23,7 @@
             <ul class="footer-list">
               <li class="footer-social-title">Connect with us</li>
               <li class="footer-social">
-                <a href="https://www.facebook.com/groups/193589624077351/"><i class="fab fa-facebook-square fa-lg"></i></a>
+                <a href="{{ site.facebook_link }}" target="blank" rel="noopener"><i class="fab fa-facebook-square fa-lg"></i></a>
               </li>
               <li class="footer-social">
                 <a href="#"><i class="fab fa-youtube fa-lg"></i></a>
@@ -31,12 +31,11 @@
               <li class="footer-social">
                 <a href="#"><i class="fab fa-twitter fa-lg"></i></a>
               </li>
-              <li>
-                <a href="#">Donate</a>
-              </li>
-              <li>
-                <a href="#">Blog</a>
-              </li>
+              {% for item in site.data.footer_links.footer_nav_social %}
+                <li>
+                  <a href="{{ item.link }}">{{ item.title }}</a>
+                </li>
+              {% endfor %}
             </ul>
           </div>
         </div>
@@ -45,18 +44,11 @@
         <div class="footer-nav-wrapper wrapper-col">
           <div class="nav-position">
             <ul class="footer-list">
-              <li>
-                <a href="#">Projects</a>
-              </li>
-              <li>
-                <a href="#">History</a>
-              </li>
-              <li>
-                <a href="#">About us</a>
-              </li>
-              <li>
-                <a href="#">Contact us</a>
-              </li>
+              {% for item in site.data.footer_links.footer_nav_general %}
+                <li>
+                  <a href="{{ item.link }}">{{ item.title }}</a>
+                </li>
+              {% endfor %}
             </ul>
           </div>
         </div>
