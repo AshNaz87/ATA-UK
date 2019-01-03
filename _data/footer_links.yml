@@ -1,4 +1,14 @@
 footer_nav_social:
+  - fa-icon: "fab fa-facebook-square fa-lg"
+    link: "https://www.facebook.com/groups/193589624077351"
+
+  - fa-icon: "fab fa-youtube fa-lg"
+    link: "#"
+
+  - fa-icon: "fab fa-twitter fa-lg"
+    link: "#"
+
+footer_nav_mini:
   - title: Blog
     link: "/blog"
 

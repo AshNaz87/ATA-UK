@@ -48,8 +48,6 @@ sass:
     - _sass
     - node_modules
 
-facebook_link: 'https://www.facebook.com/groups/193589624077351'
-
 tel_no: 01322404806
 
 generic_email_address: info@ata-uk.com
@@ -73,3 +71,4 @@ kramdown:
 exclude:
 - Gemfile
 - Gemfile.lock
+- package.json
