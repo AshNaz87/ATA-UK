@@ -1,6 +1,6 @@
 .full-hero {
   @include flex-center;
-  min-height: 100vh;
+  min-height: 85vh;
   width: auto;
 }
 
@@ -75,9 +75,12 @@
 }
 
 @media screen and (max-width: 540px) {
-  .tagline {
-    font-size: 22px;
-    width: 90vw;
+  .full-hero {
+    min-height: 87vh;
+    .tagline {
+      font-size: 22px;
+      width: 90vw;
+    }
   }
   .hero-home {
     background-attachment: scroll;
@@ -95,5 +98,11 @@
         margin-top: 2em;
       }
     }
+  }
+}
+
+@media screen and (min-width: 541px) and (max-width: 835px) {
+  .statements .statements-wrapper .pdf {
+    height: 460px;
   }
 }

@@ -10,6 +10,7 @@ html,
 body {
   height: 100%;
   margin: 0;
+  padding-top: 65px;
   position: relative;
 }
 
@@ -33,4 +34,10 @@ a img {
 .section-title {
   text-align: center;
   margin: 1em 0;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    padding-top: 32px;
+  }
 }
