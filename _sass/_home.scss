@@ -1,6 +1,6 @@
 .full-hero {
   @include flex-center;
-  min-height: 85vh;
+  min-height: 100%;
   width: auto;
 }
 
@@ -76,7 +76,6 @@
 
 @media screen and (max-width: 540px) {
   .full-hero {
-    min-height: 87vh;
     .tagline {
       font-size: 22px;
       width: 90vw;
