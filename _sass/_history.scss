@@ -1,9 +1,11 @@
 .history {
   margin: 2em 0;
   .tagline {
-    color: $sea-blue;
+    color: #fff;
     margin-bottom: 1em;
-    text-decoration: underline;
-    text-decoration-color: #000;
+    span {
+      background: $sea-blue;
+      padding: 0.5rem;
+    }
   }
 }
