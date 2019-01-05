@@ -48,6 +48,8 @@ sass:
     - _sass
     - node_modules
 
+logo_url: https://s3.eu-west-2.amazonaws.com/ata-uk/ata_logo.jpg
+
 tel_no: 01322404806
 
 generic_email_address: info@ata-uk.com

@@ -21,11 +21,7 @@ title: Home
           <div class="mission-wrapper">
             <h2>HELP US BUILD A LEGACY</h2>
             <h4>Serving Our Communities</h4>
-            <picture>
-              <source srcset="/assets/images/inspiration.webp" type="image/webp">
-              <source srcset="/assets/images/inspiration.jpg" type="image/jpg">
-              <img src="/assets/images/inspiration.jpg" alt="Join Us" class="inspiration">
-            </picture>
+            <img src="https://s3.eu-west-2.amazonaws.com/ata-uk/inspiration.jpg" alt="Join Us" class="inspiration">
           </div>
         </div>
       </div>
@@ -38,7 +34,7 @@ title: Home
         {% for objective in site.objectives %}
           <div class="col-12 col-md-6">
             <div class="objective-wrapper">
-              <img src="{{ objective.image_path }}" alt="Objective" class="objective">
+              <img src="{{ objective.image_url }}" alt="Objective" class="objective">
               <h3>{{ objective.heading }}</h3>
               <p>{{ objective.description }}</p>
             </div>
@@ -59,8 +55,8 @@ title: Home
               <div class="card border-secondary mb-4">
                 <div class="card-header">{{ event.title }}</div>
                 <div class="card-body text-secondary">
-                  <a href="{{ event.image_path }}" download>
-                    <img src="{{ event.image_path }}" alt="Previous Event" class="event-image">
+                  <a href="{{ event.image_url }}" download>
+                    <img src="{{ event.image_url }}" alt="Previous Event" class="event-image">
                   </a>
                 </div>
               </div>
@@ -106,8 +102,8 @@ title: Home
             <div class="statements-wrapper">
               <h3>{{ statement.heading }}</h3>
               <p>{{ statement.description }}</p>
-              <object data="{{ statement.pdf_path }}" type="application/pdf" class="pdf">
-                <embed src="{{ statement.pdf_path }}" type="application/pdf" class="pdf">
+              <object data="{{ statement.pdf_url }}" type="application/pdf" class="pdf">
+                <embed src="{{ statement.pdf_url }}" type="application/pdf" class="pdf">
               </object>
               <a class="open-pdf" href="{{ statement.link }}">Press to view</a>
             </div>

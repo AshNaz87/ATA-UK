@@ -1,14 +1,14 @@
 .full-hero {
   @include flex-center;
   min-height: 100%;
-  width: auto;
+  min-width: 100%;
 }
 
 .hero-home {
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url('/assets/images/mosque.jpg');
+  background-image: url('https://s3.eu-west-2.amazonaws.com/ata-uk/mosque.jpg');
   .tagline {
     font-weight: 600;
     color: #fff;
