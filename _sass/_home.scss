@@ -74,11 +74,11 @@
   }
 }
 
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 576px) {
   .full-hero {
     .tagline {
       font-size: 22px;
-      width: 90vw;
+      width: 100%;
     }
   }
   .hero-home {
@@ -100,7 +100,7 @@
   }
 }
 
-@media screen and (min-width: 541px) and (max-width: 835px) {
+@media screen and (min-width: 577px) and (max-width: 992px) {
   .statements .statements-wrapper .pdf {
     height: 460px;
   }

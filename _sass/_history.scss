@@ -9,3 +9,29 @@
     }
   }
 }
+
+.timeline {
+  .beginnings-figure {
+    @include flex-center;
+    flex-direction: column;
+    .beginnings {
+      @include img-responsive(75%);
+      margin-bottom: 1em;
+    }
+  }
+  .timeline-wrapper {
+    @include flex-center;
+    align-content: center;
+    margin: 2em 0;
+    .award-pic {
+      @include img-responsive(100%);
+      @include margin-bottom;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .timeline-wrapper {
+    flex-direction: column;
+  }
+}

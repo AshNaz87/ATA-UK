@@ -33,3 +33,8 @@
 @mixin margin-bottom {
   margin-bottom: 3em;
 }
+
+@mixin img-responsive($width) {
+  display: block;
+  width: $width;
+}
