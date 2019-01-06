@@ -19,19 +19,26 @@
       margin-bottom: 1em;
     }
   }
-  .timeline-wrapper {
+  .timeline-wrapper-one,
+  .timeline-wrapper-two {
     @include flex-center;
-    align-content: center;
     margin: 2em 0;
-    .award-pic {
-      @include img-responsive(100%);
-      @include margin-bottom;
-    }
+  }
+  .award-pic {
+    @include img-responsive(100%);
+    @include margin-bottom;
   }
 }
 
 @media screen and (max-width: 576px) {
-  .timeline-wrapper {
+  .timeline-wrapper-one,
+  .timeline-wrapper-two {
     flex-direction: column;
+  }
+  .interview {
+    @include img-responsive(90vw);
+  }
+  .award-pic {
+    width: 100vw;;
   }
 }
