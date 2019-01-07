@@ -3,7 +3,8 @@ nav {
   .navbar-logo {
     border-radius: 3px;
     margin-left: 2em;
-    width: 150px;
+    max-width: 150px;
+    height: auto;
   }
   button.navbar-toggler {
     background-color: #fff !important;
@@ -26,13 +27,19 @@ nav {
   }
 }
 
-@media (max-width: 540px) {
+@media (max-width: 576px) {
   nav {
     .navbar-logo {
-      width: 100px;
+      max-width: 100px;
     }
     a.nav-link {
       text-align: center;
     }
+  }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+  a.nav-link {
+    text-align: center;
   }
 }
